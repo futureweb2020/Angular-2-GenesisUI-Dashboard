@@ -1,0 +1,6 @@
+{
+  "buildDir" : "./dist",
+  "destUserDirs": {
+    "zpr": "./tmp/zpr"
+  }
+}
