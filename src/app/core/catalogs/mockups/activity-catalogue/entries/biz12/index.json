@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz12",
+  "id": "12",
+  "name": "1st - 2nd position",
+  "desc": "String 1",
+  "composer": "Yost",
+  "code": "A12",
+  "type": "Scale",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Shifts",
+  "grade": "C",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

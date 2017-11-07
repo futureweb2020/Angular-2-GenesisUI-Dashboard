@@ -1,0 +1,36 @@
+{
+  "telmiId": "T2",
+  "id": "2",
+  "name": "Vibrato adipiscing",
+  "desc": "Donec et dui nec justo sodales scelerisque eu id dui.",
+  "author": "",
+  "type": "Challenge",
+  "tags": [],
+  "grade": "A",
+  "steps": [
+    {
+      "id": "s4",
+      "name": "Scale in G in 8ves",
+      "desc": "3 8ves up and down. One 8ve per bow. Do not pause on top note.",
+      "activityId": "biz11"
+    },
+    {
+      "id": "s5",
+      "name": "Taking it as Read",
+      "desc": "84 BPM",
+      "activityId": "biz20"
+    },
+    {
+      "id": "s6",
+      "name": "1st - 5th position",
+      "desc": "String 1",
+      "activityId": "biz14"
+    },
+    {
+      "id": "s7",
+      "name": "5-Note Scale in 6ths (B flat)",
+      "desc": "5-Note Scale in 6ths (B flat, from D/Bb up to  A/F and back down) with joining vibrato. Do not pause on top note",
+      "activityId": "biz05"
+    }
+  ]
+}

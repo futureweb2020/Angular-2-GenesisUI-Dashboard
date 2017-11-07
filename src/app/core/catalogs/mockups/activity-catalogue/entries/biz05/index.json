@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz05",
+  "id": "05",
+  "name": "5-Note Scale in 6ths (B flat)",
+  "desc": "5-Note Scale in 6ths (B flat, from D/Bb up to  A/F and back down) with joining vibrato. Do not pause on top note",
+  "composer": "Custom (MM)",
+  "code": "A5",
+  "type": "Piece",
+  "duration": 30,
+  "difficulty": "Easy",
+  "technique": "Vibrato",
+  "grade": "A",
+  "collection": "G",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

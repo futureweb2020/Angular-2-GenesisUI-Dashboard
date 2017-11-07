@@ -1,0 +1,30 @@
+{
+  "telmiId": "T10",
+  "id": "10",
+  "name": "Legato duis dolore",
+  "desc": "Est reprehenderit minim aliquip ipsum ipsum anim occaecat voluptate nulla.",
+  "author": "",
+  "type": "Challenge",
+  "tags": [],
+  "grade": "B",
+  "steps": [
+    {
+      "id": "s33",
+      "name": "G Maj (3 8ve bow)",
+      "desc": "ABRSM 'Even Notes'",
+      "activityId": "biz08"
+    },
+    {
+      "id": "s34",
+      "name": "1st - 3rd position",
+      "desc": "String 2",
+      "activityId": "biz13"
+    },
+    {
+      "id": "s35",
+      "name": "Weight without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz01"
+    }
+  ]
+}

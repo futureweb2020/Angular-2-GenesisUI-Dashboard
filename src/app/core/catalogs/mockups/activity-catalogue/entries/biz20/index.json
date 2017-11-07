@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz20",
+  "id": "20",
+  "name": "Taking it as Read",
+  "desc": "84 BPM",
+  "composer": "Nyman",
+  "code": "A20",
+  "type": "Piece",
+  "difficulty": "Medium",
+  "duration": 30,
+  "technique": "Articulation",
+  "grade": "B",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz09",
+  "id": "09",
+  "name": "Ricochet open A string",
+  "desc": "Demonstrate a ricochet on the open A string",
+  "composer": "Custom (MM)",
+  "code": "A9",
+  "type": "Exercise",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Ricochet",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz04",
+  "id": "04",
+  "name": "Held-tone (x3)",
+  "desc": "Held tone - G (4th position A string) Demonstrate an example of arm, hand, and finger vibrato, each with interpretation of your choice",
+  "composer": "Custom (MM)",
+  "code": "A4",
+  "type": "Exercise",
+  "duration": 30,
+  "difficulty": "Hard",
+  "technique": "Vibrato",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

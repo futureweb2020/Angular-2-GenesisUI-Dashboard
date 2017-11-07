@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz06",
+  "id": "06",
+  "name": "5-Note Scale",
+  "desc": "5-Note Scale (A Maj from open A to E and back down) with joining vibrato. Do not pause on top note",
+  "composer": "Custom (MM)",
+  "code": "A6",
+  "type": "Exercise",
+  "difficulty": "Medium",
+  "duration": 30,
+  "technique": "Vibrato",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

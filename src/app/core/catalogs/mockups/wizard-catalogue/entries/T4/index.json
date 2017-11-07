@@ -1,0 +1,24 @@
+{
+  "telmiId": "T4",
+  "id": "4",
+  "name": "Open strings dictum",
+  "desc": "Aute qui nisi ad mollit in aliqua et ullamco.",
+  "author": "",
+  "type": "Learn",
+  "tags": [],
+  "grade": "A",
+  "steps": [
+    {
+      "id": "s13",
+      "name": "Ricochet open A string",
+      "desc": "Demonstrate a ricochet on the open A string",
+      "activityId": "biz09"
+    },
+    {
+      "id": "s14",
+      "name": "1st - 7th position",
+      "desc": "If possible String 4 - if motion capture markers impede 7th position, String 3",
+      "activityId": "biz15"
+    }
+  ]
+}

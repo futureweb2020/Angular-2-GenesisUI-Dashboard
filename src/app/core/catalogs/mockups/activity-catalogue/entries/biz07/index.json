@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz07",
+  "id": "07",
+  "name": "Tapping Exercise",
+  "desc": "No bow. Each finger taps 4 times on each string in rhythm.",
+  "composer": "Custom (MM)",
+  "code": "A7",
+  "type": "Piece",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Articulation",
+  "grade": "B",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

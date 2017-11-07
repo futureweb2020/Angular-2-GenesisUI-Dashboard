@@ -1,0 +1,36 @@
+{
+  "telmiId": "T7",
+  "id": "7",
+  "name": "Straight bow Anim excepteur in labore laborum eiusmod eiusmod veniam cupidatat enim minim culpa elit sit",
+  "desc": "Reprehenderit qui veniam irure eiusmod.",
+  "author": "",
+  "type": "Learn",
+  "tags": [],
+  "grade": "C",
+  "steps": [
+    {
+      "id": "s24",
+      "name": "lore ipsum 4",
+      "desc": "Bars 1-16",
+      "activityId": "biz18"
+    },
+    {
+      "id": "s25",
+      "name": "Scale in G in 8ves",
+      "desc": "3 8ves up and down. One 8ve per bow. Do not pause on top note.",
+      "activityId": "biz11"
+    },
+    {
+      "id": "s26",
+      "name": "Weight without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz01"
+    },
+    {
+      "id": "s27",
+      "name": "Taking it as Read",
+      "desc": "84 BPM",
+      "activityId": "biz20"
+    }
+  ]
+}

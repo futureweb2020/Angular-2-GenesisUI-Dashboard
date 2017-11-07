@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz21",
+  "id": "21",
+  "name": "24 Note Scale System",
+  "desc": "A melodic minor,  60 bpm, 2 beats per bow.  Repeat and play each bowing/rhythmic pattern.",
+  "composer": "Galamian",
+  "code": "A21",
+  "type": "Exercise",
+  "difficulty": "Hard",
+  "duration": 30,
+  "technique": "Articulation",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

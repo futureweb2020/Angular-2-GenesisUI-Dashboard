@@ -1,0 +1,24 @@
+{
+  "telmiId": "T8",
+  "id": "8",
+  "name": "Jeté Irure Lorem et sint commodo",
+  "desc": "Irure aliquip tempor sint velit in pariatur fugiat proident.",
+  "author": "",
+  "type": "Learn",
+  "tags": [],
+  "grade": "C",
+  "steps": [
+    {
+      "id": "s28",
+      "name": "Tapping Exercise",
+      "desc": "No bow. Each finger taps 4 times on each string in rhythm.",
+      "activityId": "biz07"
+    },
+    {
+      "id": "s29",
+      "name": "lore ipsum 7",
+      "desc": "Complete. 1st half upper half, 2nd half lower half",
+      "activityId": "biz17"
+    }
+  ]
+}

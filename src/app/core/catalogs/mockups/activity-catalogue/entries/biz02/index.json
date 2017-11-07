@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz02",
+  "id": "02",
+  "name": "Tilt without vibrato",
+  "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+  "composer": "Custom (MM_DeLay)",
+  "code": "A2",
+  "type": "Exercise",
+  "duration": 30,
+  "difficulty": "Medium",
+  "technique": "Tilt",
+  "grade": "B",
+  "collection": "G",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

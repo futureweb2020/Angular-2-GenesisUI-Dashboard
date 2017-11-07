@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz11",
+  "id": "11",
+  "name": "Scale in G in 8ves",
+  "desc": "3 8ves up and down. One 8ve per bow. Do not pause on top note.",
+  "composer": "ABRSM",
+  "code": "A11",
+  "type": "Scale",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Tilt",
+  "grade": "A",
+  "collection": "G",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz08",
+  "id": "08",
+  "name": "G Maj (3 8ve bow)",
+  "desc": "ABRSM 'Even Notes'",
+  "composer": "ABRSM",
+  "code": "A8",
+  "type": "Scale",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Ricochet",
+  "grade": "B",
+  "collection": "G",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

@@ -1,0 +1,30 @@
+{
+  "telmiId": "T9",
+  "id": "9",
+  "name": "Martelé Laboris",
+  "desc": "Consequat esse nisi Lorem officia nisi Lorem ullamco incididunt amet.",
+  "author": "",
+  "type": "Learn",
+  "tags": [],
+  "grade": "C",
+  "steps": [
+    {
+      "id": "s30",
+      "name": "1st - 2nd position",
+      "desc": "String 1",
+      "activityId": "biz12"
+    },
+    {
+      "id": "s31",
+      "name": "Speed without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz03"
+    },
+    {
+      "id": "s32",
+      "name": "lore ipsum 4",
+      "desc": "Bars 1-16",
+      "activityId": "biz18"
+    }
+  ]
+}

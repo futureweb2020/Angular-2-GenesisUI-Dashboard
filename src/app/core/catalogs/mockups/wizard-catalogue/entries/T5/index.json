@@ -1,0 +1,54 @@
+{
+  "telmiId": "T5",
+  "id": "5",
+  "name": "Pizzicato nulla culpa ex voluptate fugiat aute sint eu tempor aliquip",
+  "desc": "Nostrud deserunt culpa incididunt nostrud exercitation ex culpa cillum nostrud.",
+  "author": "",
+  "type": "Challenge",
+  "tags": [],
+  "grade": "C",
+  "steps": [
+    {
+      "id": "s15",
+      "name": "24 Note Scale System",
+      "desc": "A melodic minor,  60 bpm, 2 beats per bow.  Repeat and play each bowing/rhythmic pattern.",
+      "activityId": "biz21"
+    },
+    {
+      "id": "s16",
+      "name": "lore ipsum 4",
+      "desc": "Bars 1-16",
+      "activityId": "biz18"
+    },
+    {
+      "id": "s17",
+      "name": "1st - 3rd position",
+      "desc": "String 2",
+      "activityId": "biz13"
+    },
+    {
+      "id": "s18",
+      "name": "5-Note Scale",
+      "desc": "5-Note Scale (A Maj from open A to E and back down) with joining vibrato. Do not pause on top note",
+      "activityId": "biz06"
+    },
+    {
+      "id": "s19",
+      "name": "lore ipsum 7",
+      "desc": "Complete. 1st half upper half, 2nd half lower half",
+      "activityId": "biz17"
+    },
+    {
+      "id": "s20",
+      "name": "Speed without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz03"
+    },
+    {
+      "id": "s21",
+      "name": "1st - 7th position",
+      "desc": "If possible String 4 - if motion capture markers impede 7th position, String 3",
+      "activityId": "biz15"
+    }
+  ]
+}

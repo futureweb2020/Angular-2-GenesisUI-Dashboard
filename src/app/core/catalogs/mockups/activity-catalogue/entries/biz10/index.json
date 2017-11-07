@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz10",
+  "id": "10",
+  "name": "G Chromatic",
+  "desc": "3 8ves up and down. One 8ve per bow. Do not pause on top note.",
+  "composer": "ABRSM",
+  "code": "A10",
+  "type": "Scale",
+  "difficulty": "Medium",
+  "duration": 30,
+  "technique": "Ricochet",
+  "grade": "C",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

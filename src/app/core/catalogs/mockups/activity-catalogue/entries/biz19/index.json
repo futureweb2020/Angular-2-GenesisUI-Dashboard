@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz19",
+  "id": "19",
+  "name": "System of Scales",
+  "desc": "Arpeggio excerpt in C Maj",
+  "composer": "Flesch",
+  "code": "A19",
+  "type": "Piece",
+  "difficulty": "Easy",
+  "duration": 30,
+  "technique": "Tilt",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

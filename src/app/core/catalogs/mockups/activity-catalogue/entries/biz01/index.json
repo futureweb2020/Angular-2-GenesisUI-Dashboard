@@ -1,0 +1,16 @@
+{
+  "telmiId": "biz01",
+  "id": "01",
+  "name": "Weight without vibrato",
+  "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+  "composer": "Custom (MM_DeLay)",
+  "code": "A1",
+  "type": "Piece",
+  "duration": 30,
+  "difficulty": "Easy",
+  "technique": "Weight",
+  "grade": "A",
+  "collection": "F",
+  "video": "BKezUd_xw20",
+  "score": "assets/img/violin_sheet.jpg"
+}

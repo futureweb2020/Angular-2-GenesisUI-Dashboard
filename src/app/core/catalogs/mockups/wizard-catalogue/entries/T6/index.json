@@ -1,0 +1,24 @@
+{
+  "telmiId": "T6",
+  "id": "6",
+  "name": "Arpeggio Occaecat eu non velit",
+  "desc": "Sint dolor fugiat culpa culpa magna.",
+  "author": "",
+  "type": "Learn",
+  "tags": [],
+  "grade": "A",
+  "steps": [
+    {
+      "id": "s22",
+      "name": "Tilt without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz02"
+    },
+    {
+      "id": "s23",
+      "name": "5-Note Scale in 6ths (B flat)",
+      "desc": "5-Note Scale in 6ths (B flat, from D/Bb up to  A/F and back down) with joining vibrato. Do not pause on top note",
+      "activityId": "biz05"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "telmiId": "T1",
+  "id": "1",
+  "name": "Détaché Lorem",
+  "desc": "Mauris id gravida elit. Suspendisse dapibus imperdiet nibh, non suscipit odio.",
+  "author": "",
+  "type": "Challenge",
+  "tags": [],
+  "grade": "A",
+  "steps": [
+    {
+      "id": "s1",
+      "name": "Weight without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz01"
+    },
+    {
+      "id": "s2",
+      "name": "Tilt without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz02"
+    },
+    {
+      "id": "s3",
+      "name": "Speed without vibrato",
+      "desc": "Complete (see video and instruction sheet) WITHOUT VIBRATO",
+      "activityId": "biz03"
+    }
+  ]
+}

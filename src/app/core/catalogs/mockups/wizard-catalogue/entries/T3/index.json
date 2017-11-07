@@ -1,0 +1,42 @@
+{
+  "telmiId": "T3",
+  "id": "3",
+  "name": "Harmonics velit",
+  "desc": "Nulla nec dignissim nisi, id varius felis.",
+  "author": "",
+  "type": "Challenge",
+  "tags": [],
+  "grade": "B",
+  "steps": [
+    {
+      "id": "s8",
+      "name": "G Maj (3 8ve bow)",
+      "desc": "ABRSM 'Even Notes'",
+      "activityId": "biz08"
+    },
+    {
+      "id": "s9",
+      "name": "Held-tone (x3)",
+      "desc": "Held tone - G (4th position A string) Demonstrate an example of arm, hand, and finger vibrato, each with interpretation of your choice",
+      "activityId": "biz04"
+    },
+    {
+      "id": "s10",
+      "name": "lore ipsum 4",
+      "desc": "Bars 1-16",
+      "activityId": "biz18"
+    },
+    {
+      "id": "s11",
+      "name": "1st - 2nd position",
+      "desc": "String 1",
+      "activityId": "biz12"
+    },
+    {
+      "id": "s12",
+      "name": "System of Scales",
+      "desc": "Arpeggio excerpt in C Maj",
+      "activityId": "biz19"
+    }
+  ]
+}
