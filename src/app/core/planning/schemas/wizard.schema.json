@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "ActivitySource": {
+      "enum": [
+        "Manual",
+        "Wizard"
+      ],
+      "type": "string"
+    },
+    "ActivityType": {
+      "enum": [
+        "Break",
+        "Exercise",
+        "Other",
+        "Piece",
+        "Reflection",
+        "Scale",
+        "WarmUp"
+      ],
+      "type": "string"
+    },
+    "ActivityViewModel": {
+      "properties": {
+        "duration": {
+          "type": "number"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/ActivitySource"
+        },
+        "type": {
+          "$ref": "#/definitions/ActivityType"
+        }
+      },
+      "type": "object"
+    },
+    "StepStatus": {
+      "enum": [
+        "Completed",
+        "Locked",
+        "Unlocked"
+      ],
+      "type": "string"
+    },
+    "StepType": {
+      "enum": [
+        "ContactPoint",
+        "SlowBow",
+        "Speed",
+        "Tilt",
+        "Weight"
+      ],
+      "type": "string"
+    },
+    "StepViewModel": {
+      "properties": {
+        "activities": {
+          "items": {
+            "$ref": "#/definitions/ActivityViewModel"
+          },
+          "type": "array"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/StepStatus"
+        },
+        "type": {
+          "$ref": "#/definitions/StepType"
+        },
+        "wizId": {
+          "type": "string"
+        },
+        "wizStep": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "WizardSource": {
+      "enum": [
+        "External",
+        "UserDefined"
+      ],
+      "type": "string"
+    },
+    "WizardStatus": {
+      "enum": [
+        "Archieved",
+        "Finished",
+        "Incomplete"
+      ],
+      "type": "string"
+    },
+    "WizardType": {
+      "enum": [
+        "Challenger",
+        "Learn",
+        "Studio",
+        "Teacher"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/definitions/WizardSource"
+    },
+    "status": {
+      "$ref": "#/definitions/WizardStatus"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/definitions/StepViewModel"
+      },
+      "type": "array"
+    },
+    "type": {
+      "$ref": "#/definitions/WizardType"
+    }
+  },
+  "type": "object",
+  "version": 0
+}

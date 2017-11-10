@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "ActivitySource": {
+      "enum": [
+        "Manual",
+        "Wizard"
+      ],
+      "type": "string"
+    },
+    "ActivityType": {
+      "enum": [
+        "Break",
+        "Exercise",
+        "Other",
+        "Piece",
+        "Reflection",
+        "Scale",
+        "WarmUp"
+      ],
+      "type": "string"
+    },
+    "ActivityViewModel": {
+      "properties": {
+        "duration": {
+          "type": "number"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/ActivitySource"
+        },
+        "type": {
+          "$ref": "#/definitions/ActivityType"
+        }
+      },
+      "type": "object"
+    },
+    "TimeSlotSource": {
+      "enum": [
+        "Manual",
+        "Wizard"
+      ],
+      "type": "string"
+    },
+    "TimeSlotType": {
+      "enum": [
+        "Audition",
+        "Lesson",
+        "PraticeSession",
+        "Recital"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "activities": {
+      "items": {
+        "$ref": "#/definitions/ActivityViewModel"
+      },
+      "type": "array"
+    },
+    "duration": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/definitions/TimeSlotSource"
+    },
+    "startTime": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/definitions/TimeSlotType"
+    }
+  },
+  "type": "object",
+  "version": 0
+}
