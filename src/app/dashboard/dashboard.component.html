@@ -1,0 +1,15 @@
+<div class="animated fadeIn">
+    Hello World!
+</div>
+<ul *ngFor="let entry of timeslots$ | async" class="list-group-item">
+      <li class="list-group-item">Id: {{entry.id }}</li>
+      <li class="list-group-item">Name: {{entry.name }}</li>
+      <li class="list-group-item">Type: {{ entry.type}}</li>
+      <li class="list-group-item">Start Time: {{ entry.startTime}}</li>
+      <li class="list-group-item">Duration: {{ entry.duration}}</li>
+      <li class="list-group-item">Source: {{ entry.source}}</li>
+      <li class="list-group-item">Activities: {{ entry.activities}}</li>
+</ul>
+<button type="button" class="btn btn-primary" (click)="seedNew()">Add</button>
+
+
