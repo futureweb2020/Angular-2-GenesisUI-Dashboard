@@ -1,0 +1,41 @@
+<div class="card">
+	<div class="card-header">Agenda
+		<button type="button" class="btn btn-primary float-right" (click)="newEntryEvent.next(null)">New entry</button>
+	</div>
+  <app-new-entry [newEntryEvent]="newEntryEvent"></app-new-entry>
+	<div class="card-block">
+		<div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-secondary" (click)="navigateDateToPrev()">
+          <i class="icon-arrow-left"></i>
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="navigateDateToNext()">
+          <i class="icon-arrow-right"></i>
+        </button>
+			</div>
+      <button type="button" class="btn btn-secondary" (click)="chooseDate()">Today</button>
+      {{currentDate | date: "EEEE, d MMM, y"}}
+      <div class="btn-group float-right">
+        <button type="button" class="btn btn-secondary" [(ngModel)]="currentView" btnRadio="day">Day</button>
+        <button type="button" class="btn btn-secondary" [(ngModel)]="currentView" btnRadio="week">Week</button>
+        <button type="button" class="btn btn-secondary" [(ngModel)]="currentView" btnRadio="month">Month</button>
+      </div>
+		</div>
+    <div>
+      <dx-scheduler
+            [dataSource]="timeSlots"
+            appointmentTemplate="timeslot-template"
+            currentView="{{currentView}}"
+            [(currentDate)]="currentDate"
+            [views]="['day', 'week', 'month']">
+
+            <div *dxTemplate="let timeSlot of 'timeslot-template'">
+              <div class="h-100">
+                <h5>{{timeSlot.name}}</h5>
+                <app-time-slot [timeSlot]="timeSlot"></app-time-slot>
+              </div>
+            </div>
+      </dx-scheduler>
+    </div>
+	</div>
+</div>
