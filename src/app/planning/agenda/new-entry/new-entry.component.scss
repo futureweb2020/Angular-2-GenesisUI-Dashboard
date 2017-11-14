@@ -1,0 +1,32 @@
+@import '../../../../scss/bootstrap-variables.scss';
+
+.dropdown-item i {
+	color: $gray-dark;
+}
+
+$width: 320px;
+$transition: right 200ms;
+
+.slide {
+	position: absolute;
+	width: $width;
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	
+	&.hidden {
+		right: -$width;
+	}
+	&.shown {
+		right: 0px;
+	}
+}
+
+.modal-content {
+	overflow: hidden;
+}
+
+.set-activities {
+	height: 422px;
+}

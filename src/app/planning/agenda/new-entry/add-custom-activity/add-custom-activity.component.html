@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="name">Activity name</label>
+			<input type="text" class="form-control" id="name" placeholder="Enter an activity title" />
+		</div>
+		<div class="form-group">
+			<div>
+				<label for="type">Select activity type</label>
+			</div>
+			<div class="btn-group" id="type">
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Exercise}}">{{ActivityType.Exercise}}</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Scale}}">{{ActivityType.Scale}}</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Piece}}">{{ActivityType.Piece}}</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Other}}">{{ActivityType.Other}}</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="bars">Bars</label>
+			<input type="text" class="form-control" id="bars" placeholder="For example: page-1 till end of next one" />
+		</div>
+		<div class="form-group">
+			<label for="duration">Duration (min)</label>
+			<input type="text" class="form-control" id="duration" placeholder="30" />
+		</div>
+	</div>
+	<div class="col-md-3">
+	</div>
+</div>

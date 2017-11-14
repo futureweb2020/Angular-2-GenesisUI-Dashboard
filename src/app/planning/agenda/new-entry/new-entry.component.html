@@ -1,0 +1,175 @@
+<div bsModal #newEntryModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="newEntryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-primary modal-lg">
+    <div class="modal-content"  *ngIf="step == 0 || step == 1">
+
+      <div class="modal-header">
+        <h4 class="modal-title float-left">New entry</h4>
+        <button type="button" class="close float-right" (click)="newEntryModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+    		<tabset #staticTabs>
+
+		      <tab heading="Schedule" (select)="step = 0" [active]="step == 0">
+		      	<div class="row">
+		      		<div class="col-md-7">
+		      			<div class="form-group">
+		      				<label for="entry-name">Entry name</label>
+		      				<input type="text" class="form-control" id="entry-name" placeholder="Agenda entry name" />
+		      			</div>
+		      			<div class="form-group">
+		      				<label for="location">Location</label>
+		      				<input type="text" class="form-control" id="location" placeholder="Session location" />
+		      			</div>
+		      			<div class="form-group">
+		      				<div>
+		      					<label for="entry-type">Select entry type</label>
+		      				</div>
+		      				<div class="btn-group" id="entry-type">
+										<label class="btn btn-secondary btn-sm" [(ngModel)]="entryType" btnRadio="practice">Practice</label>
+										<label class="btn btn-secondary btn-sm" [(ngModel)]="entryType" btnRadio="lesson">Lesson</label>
+										<label class="btn btn-secondary btn-sm" [(ngModel)]="entryType" btnRadio="recital">Recital</label>
+										<label class="btn btn-secondary btn-sm" [(ngModel)]="entryType" btnRadio="audition">Audition</label>
+									</div>
+								</div>
+								<div class="row">
+		        			<div class="col-md-5">
+				        		<div class="form-group">
+				        			<label for="schedule-date">Select entry date</label>
+				        			<button type="button" id="schedule-date" class="btn btn-secondary form-control" (click)="settingDate = true; settingTime = false;">{{whenDate | date: "dd/MM/y"}}</button>
+				        		</div>
+				        	</div>
+				        	<div class="col-md-7">
+				        		<div class="row">
+				        			<div class="col-md-6">
+						        		<div class="form-group">
+						        			<label for="schedule-time">Start time</label>
+						        			<button type="button" id="schedule-time" class="btn btn-secondary form-control" (click)="settingTime = !settingTime; settingDate = false">{{whenTime | date: "HH:mm"}}</button>
+						        		</div>
+						        	</div>
+						        	<div class="col-md-6">
+						        		<div class="form-group">
+						        			<label for="duration">Duration (min)</label>
+						        			<input type="number" class="form-control" id="duration" placeholder="" min="1" [(ngModel)]="duration" />
+						        		</div>
+						        	</div>
+				        		</div>
+				        		<timepicker [(ngModel)]="whenTime" *ngIf="settingTime" [showSpinners]="true"></timepicker>
+			        		</div>
+			        		<div class="datepicker">
+										<datepicker [(ngModel)]="whenDate" *ngIf="settingDate" (selectionDone)="settingDate = false"></datepicker>
+									</div>
+		      			</div>
+		      		</div>
+		      		<div class="col-md-5">
+		      			<div class="form-group">
+		      				<label for="preview-agenda">Preview agenda</label>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </tab>
+
+		      <tab heading="Set activities" (select)="step = 1" [active]="step == 1" class="set-activities">
+		      	<div class="row">
+		      		<div class="col-md-12">
+			      		<div class="float-left"><h5><strong>{{duration}} min total | {{allocatedDuration}} min planned</strong></h5></div>
+			      		<div class="btn-group float-right" dropdown placement="bottom right">
+					        <button dropdownToggle type="button" class="btn btn-secondary">
+					          Add activity <i class="fa fa-caret-down"></i>
+					        </button>
+					        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+					          <li role="menuitem"><button class="dropdown-item" (click)="step = 2"><i class="fa fa-book"></i> from Catalogue</button></li>
+					          <li role="menuitem"><button class="dropdown-item" (click)="step = 3"><i class="fa fa-magic"></i> from Wizard Step</button></li>
+					          <li role="menuitem"><button class="dropdown-item" (click)="step = 4"><i class="fa fa-file-sound-o"></i> Custom Activity</button></li>
+					          <li role="menuitem"><button class="dropdown-item" (click)="startActivitySchedule.next(ActivityType.WarmUp)"><i class="fa fa-signal"></i> Warm-up</button></li>
+					          <li role="menuitem"><button class="dropdown-item"><i class="fa fa-coffee"></i> Break</button></li>
+					          <li role="menuitem"><button class="dropdown-item" (click)="startActivitySchedule.next(ActivityType.Reflection)"><i class="fa fa-search"></i> Review</button></li>
+					          <li role="menuitem"><button class="dropdown-item"><i class="fa fa-calendar"></i> Planning Time</button></li>
+					        </ul>
+					      </div>
+				      </div>
+		      	</div>
+		      	<div class="row">
+		      		<div class="col-md-12">
+		      			<app-new-entry-schedule [duration]="duration" [startActivitySchedule]="startActivitySchedule" (toggleActivityEditor)="toggleActivityEditor($event)"></app-new-entry-schedule>
+		      		</div>
+		      	</div>
+		      </tab>
+
+		    </tabset>
+      </div>
+
+      <div class="modal-footer" *ngIf="step == 0">
+      	<button type="button" class="btn btn-secondary float-left" (click)="newEntryModal.hide()">Cancel</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1;">Save & Next</button>
+      </div>
+      <div class="modal-footer" *ngIf="step == 1">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 0;">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="saveEntry()">Save Entry</button>
+      </div>
+
+      <div #activityEditor class="modal-content slide hidden">
+	      <div class="modal-primary modal-header">
+					<h4>Activity settings</h4>
+					<button type="button" class="close float-right" (click)="toggleActivityEditor(null)" aria-label="Hide">
+	          <span aria-hidden="true">&gt;</span>
+	        </button>
+				</div>
+				<div class="modal-body">
+      		<app-side-activity-editor (hideActivityEditor)="toggleActivityEditor(null)" [eeNewActivity]="eeNewActivity"></app-side-activity-editor>
+      	</div>
+      </div>
+    </div>
+
+
+    <div class="modal-content" *ngIf="step == 2">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">New entry > Set activities - Add activity from Activity Catalogue</h4>
+        <button type="button" class="close float-right" (click)="newEntryModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-add-ctlg-piece></app-add-ctlg-piece>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1;">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1;">Add activity</button>
+      </div>
+    </div>
+
+    <div class="modal-content" *ngIf="step == 3">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">New entry > Set activities - Add activity from Wizard Step</h4>
+        <button type="button" class="close float-right" (click)="newEntryModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-add-from-wizard-steps></app-add-from-wizard-steps>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1;">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1;">Add selected</button>
+      </div>
+    </div>
+
+    <div class="modal-content" *ngIf="step == 4">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">New entry - Add custom activity</h4>
+        <button type="button" class="close float-right" (click)="newEntryModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-add-custom-activity></app-add-custom-activity>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1;">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1;">Add activity</button>
+      </div>
+    </div>
+  </div>
+</div>
