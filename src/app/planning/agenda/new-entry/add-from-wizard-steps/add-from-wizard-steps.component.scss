@@ -1,0 +1,31 @@
+@import '../../../../../scss/_telmi_custom-variables.scss';
+
+.wizard {
+	padding: 15px;
+	border: 1px solid #E3E8EC;
+	margin-bottom: 10px;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-grey-05;
+	}
+	&.active, &.active:hover {
+		background-color: $color-grey-24;
+	}
+}
+.wizard:last-child {
+	margin-bottom: 0px;
+}
+
+.step {
+	padding: 8px;
+	border: 1px solid $color-grey-24;
+	margin-bottom: 4px;
+}
+
+.fa {
+	margin: 5px;
+}
+
+.activity.active {
+	background-color: $color-grey-24;
+}

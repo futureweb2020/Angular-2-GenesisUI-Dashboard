@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-md-5">
+		<div class="wizard" *ngFor="let wizard of wizards" [ngSwitch]="wizard.type" [(ngModel)]="selectedId" btnRadio="{{wizard.id}}" (ngModelChange)="onWizardClick()">
+			<span *ngSwitchCase="WizardType.Learn">Teacher</span>
+	    <span *ngSwitchCase="WizardType.Challenge">Challenge</span>
+	    <span *ngSwitchCase="WizardType.Practice">Learn</span>
+	    <span *ngSwitchCase="WizardType.Studio">Studio</span>
+			: {{wizard.name}}
+			<button type="button" class="btn btn-sm btn-link float-right"><i class="icon-settings"></i></button>
+		</div>
+	</div>
+	<div class="col-md-7">
+		<div class="step">
+			<div class="row">
+				<div class="col-md-12 text-truncate">
+					<i class="fa fa-magic"></i>
+					Wizard overview
+				</div>
+			</div>
+		</div>
+		<h5><strong>Wizard Steps</strong></h5>
+		<template ngFor let-activity [ngForOf]="selectedWizard.activities">
+			<div class="activity" [(ngModel)]="activity.selected" btnCheckbox>
+      	<app-activity [activity]="activity" [where]="'new-entry'"></app-activity>
+      </div>
+    </template>
+	</div>
+</div>
