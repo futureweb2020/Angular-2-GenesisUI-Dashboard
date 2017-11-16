@@ -1,0 +1,77 @@
+<label>
+Set up your Warm-up settings.
+</label>
+<div class="row">
+	<div class="col-md-12">
+		<div class="form-group embed-responsive embed-responsive-16by9">
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<button type="button" class="btn btn-secondary btn-sm float-left">Reference video</button>
+		<button type="button" class="btn btn-secondary btn-sm float-right">Music score</button>
+	</div>
+</div>
+<hr/>
+<div class="form-group">
+	<label for="duration">Duration</label>
+	<input type="range" class="form-control" id="duration" [(ngModel)]="duration" />
+	<span class="float-right">{{duration}} mins</span>
+</div>
+<label>
+Keep track of
+</label>
+<div class="row">
+	<div class="col-md-6">
+		Tempo
+		<label class="switch switch-default switch-pill switch-primary float-right">
+			<input class="switch-input" checked="" type="checkbox">
+			<span class="switch-label"></span>
+			<span class="switch-handle"></span>
+		</label>
+	</div>
+	<div class="col-md-6">
+		Practice time
+		<label class="switch switch-default switch-pill switch-primary float-right">
+			<input class="switch-input" checked="" type="checkbox">
+			<span class="switch-label"></span>
+			<span class="switch-handle"></span>
+		</label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		Posture
+		<label class="switch switch-default switch-pill switch-primary float-right">
+			<input class="switch-input" checked="" type="checkbox">
+			<span class="switch-label"></span>
+			<span class="switch-handle"></span>
+		</label>
+	</div>
+	<div class="col-md-6">
+		Dynamics
+		<label class="switch switch-default switch-pill switch-primary float-right">
+			<input class="switch-input" checked="" type="checkbox">
+			<span class="switch-label"></span>
+			<span class="switch-handle"></span>
+		</label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		Notes
+		<label class="switch switch-default switch-pill switch-primary float-right">
+			<input class="switch-input" checked="" type="checkbox">
+			<span class="switch-label"></span>
+			<span class="switch-handle"></span>
+		</label>
+	</div>
+</div>
+<br/>
+<div class="row">
+	<div class="col-md-12">
+		<button type="button" class="btn btn-secondary float-left" (click)="hideActivityEditor.next(null)">Cancel</button>
+		<button type="button" class="btn btn-primary float-right" (click)="updateActivity()">Update</button>
+	</div>
+</div>

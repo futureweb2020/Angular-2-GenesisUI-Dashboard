@@ -1,0 +1,21 @@
+@import '../../../../../scss/_telmi_custom-variables.scss';
+
+.activity {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px dashed $color-grey-34;
+}
+
+.activity:first-child {
+	margin-top: 10px;
+}
+
+.empty {
+	background: none;
+	color: $color-grey-34;
+}
+
+.content-center {
+	text-align: center;
+	vertical-align: middle;
+}

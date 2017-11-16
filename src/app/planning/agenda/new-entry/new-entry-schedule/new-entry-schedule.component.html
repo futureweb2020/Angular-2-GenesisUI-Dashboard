@@ -1,0 +1,28 @@
+<div *ngFor="let activity of activities">
+	<div class="activity empty content-center" *ngIf="activity.isEmpty && !activity.isScheduling">
+		<h5>{{activity.duration}} minutes available</h5>
+	</div>
+	<div class="activity content-center" *ngIf="activity.isEmpty && activity.isScheduling" [ngSwitch]="activity.scheduleType">
+		<div *ngSwitchCase="ActivityType.WarmUp">
+			<span>Add warm-up activity ({{activity.duration}} min):</span>
+			<div class="btn-group">
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="subType" btnRadio="{{SubType.OpenStrings}}" (ngModelChange)="scheduleActivity(activity)">{{SubType.OpenStrings}}</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="subType" btnRadio="{{SubType.Custom}}" (ngModelChange)="scheduleActivity(activity)">{{SubType.Custom}}</label>
+			</div>
+		</div>
+		<div *ngSwitchCase="ActivityType.Reflection">
+			<span>Add reflection activity ({{activity.duration}} min):</span>
+			<div class="btn-group">
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="subType" btnRadio="{{SubType.Free}}" (ngModelChange)="scheduleActivity(activity)">{{SubType.Free}}</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="subType" btnRadio="{{SubType.Self}}" (ngModelChange)="scheduleActivity(activity)">{{SubType.Self}}</label>
+			</div>
+		</div>
+	</div>
+	<div class="activity" *ngIf="!activity.isEmpty">
+		<button type="button" class="btn btn-link"><i class="fa fa-bars fa-lg"></i></button> {{activity.activityType}}: {{activity.subType}} ({{activity.duration}} min)
+		<div class="float-right">
+			<button type="button" class="btn btn-secondary btn-link" (click)="toggleActivityEditor.next(activity)"><i class="fa fa-gear fa-lg"></i></button>
+			<button type="button" class="btn btn-secondary btn-link" (click)="deleteActivity(activity)"><i class="fa fa-trash-o fa-lg"></i></button>
+		</div>
+	</div>
+</div>
