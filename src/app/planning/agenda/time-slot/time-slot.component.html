@@ -1,0 +1,14 @@
+<div *ngIf="timeSlot.activities" class="timeslot-detail">
+  <div class="drop-pane" [dragula]="'activities'" [dragulaModel]="droppedActivities">
+  </div>
+  <div *ngFor="let activity of timeSlot.activities" class="activity d-inline-block h-100" [style.width]="activity.width + '%'">
+    <div class="activity-pane h-100">
+      {{activity.name}}
+    </div>
+  </div>
+  <template [ngIf]="timeSlot.remaining > 0">
+  	<div class="activity d-inline-block h-100" [style.width]="timeSlot.remainingWidth + '%'">
+	    <div class="activity-pane h-100 not-scheduled">not scheduled</div>
+	  </div>
+  </template>
+</div>
