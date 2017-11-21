@@ -1,0 +1,39 @@
+@import '../../../../scss/_telmi_custom-variables.scss';
+
+.step {
+	padding: 8px;
+	border: 1px solid $color-grey-24;
+	margin-bottom: 4px;
+}
+
+.fa-check {
+	color: $color-seagreen;
+}
+
+.fa-arrow-right {
+	color: $color-blue-shade1;
+}
+
+.fa-ellipsis-h {
+	color: $color-grey-34;
+}
+
+.fa-lock {
+	color: $color-grey-60;
+}
+
+.fa-calendar {
+	color: $color-grey-34;
+}
+
+.fa-clock-o {
+	color: $color-grey-34;
+}
+
+.color-error {
+	color: $color-red;
+}
+
+.fa {
+	margin: 5px;
+}

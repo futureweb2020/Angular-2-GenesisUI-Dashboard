@@ -1,0 +1,27 @@
+<div class="step drag" [ngSwitch]="activity.status">
+	<div class="row">
+		<div class="{{activity.deadline ? 'col-md-4' : 'col-md-7'}} text-truncate">
+			<i class="fa fa-check" *ngSwitchCase="StepStatus.Completed"></i>
+			<i class="fa fa-check" *ngSwitchCase="StepStatus.CompletedLately"></i>
+			<i class="fa fa-arrow-right" *ngSwitchCase="StepStatus.Planned"></i>
+			<i class="fa fa-arrow-right" *ngSwitchCase="StepStatus.PlannedDependency"></i>
+			<i class="fa fa-arrow-right" *ngSwitchCase="StepStatus.PlannedError"></i>
+			<i class="fa fa-ellipsis-h" *ngSwitchCase="StepStatus.NotPlanned"></i>
+			{{activity.name}}
+		</div>
+		<div class="col-md-3" *ngIf="activity.deadline">
+			<i class="fa fa-clock-o"></i>{{activity.deadline | date: "dd MMM"}}
+		</div>
+		<div class="col-md-5">
+			<i class="fa fa-calendar"></i>{{activity.times}}x {{activity.duration}}min
+
+			<span class="float-right">
+				<i class="fa fa-lock color-error" *ngSwitchCase="StepStatus.PlannedError"></i>
+				<i class="fa fa-lock" *ngSwitchCase="StepStatus.PlannedDependency"></i>
+
+				<app-schedule-entry *ngIf="where == 'wizards'"></app-schedule-entry>
+				<app-configure-step *ngIf="where == 'new-entry'"></app-configure-step>
+			</span>
+		</div>
+	</div>
+</div>

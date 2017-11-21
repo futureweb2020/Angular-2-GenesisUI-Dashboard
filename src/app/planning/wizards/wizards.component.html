@@ -1,0 +1,13 @@
+<div class="card">
+	<div class="card-header">Wizards
+		<div class="float-right">
+      <button type="button" class="btn btn-primary" (click)="showNewWizardModal()">New wizard</button>
+    </div>
+	</div>
+	<div class="card-block">
+    <template ngFor let-wizard [ngForOf]="wizards">
+      <app-wizard [wizard]="wizard" (onRemove)="removeWizard($event)"></app-wizard>
+    </template>
+	</div>
+</div>
+<app-new-wizard [openModal]="openModal"></app-new-wizard>
