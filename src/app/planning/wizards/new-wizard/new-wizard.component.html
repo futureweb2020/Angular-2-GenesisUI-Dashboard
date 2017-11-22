@@ -1,0 +1,91 @@
+<div bsModal #newWizardModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="newWizardModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-primary modal-lg" [ngSwitch]="step">
+
+
+    <div class="modal-content" *ngSwitchCase="0">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">Wizard - Select from catalogue</h4>
+        <button type="button" class="close float-right" (click)="newWizardModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    		<app-sel-from-ctlg></app-sel-from-ctlg>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="newWizardModal.hide()">Cancel</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1">Save & Next</button>
+      </div>
+    </div>
+
+
+    <div class="modal-content" *ngSwitchCase="1">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">Wizard - Configure</h4>
+        <button type="button" class="close float-right" (click)="newWizardModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-configure (onGoto)="goto($event)"></app-configure>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 0">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 4">Save & Next</button>
+      </div>
+    </div>
+
+
+    <div class="modal-content" *ngSwitchCase="2">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">Wizard - Configure - Piece Catalogue</h4>
+        <button type="button" class="close float-right" (click)="newWizardModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-add-ctlg-piece></app-add-ctlg-piece>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1">Add piece</button>
+      </div>
+    </div>
+
+
+    <div class="modal-content" *ngSwitchCase="3">
+      <div class="modal-header">
+        <h4 class="modal-title float-left">Wizard - Configure - Add custom piece</h4>
+        <button type="button" class="close float-right" (click)="newWizardModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-add-custom-piece></app-add-custom-piece>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="step = 1">Add piece</button>
+      </div>
+    </div>
+
+
+    <div class="modal-content" *ngSwitchDefault>
+      <div class="modal-header">
+        <h4 class="modal-title float-left" [ngSwitch]="step">Wizard - Review</h4>
+        <button type="button" class="close float-right" (click)="newWizardModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<app-review></app-review>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-secondary float-left" (click)="step = 1">Back</button>
+      	<button type="button" class="btn btn-primary float-right" (click)="addWizard()">Add wizard</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>

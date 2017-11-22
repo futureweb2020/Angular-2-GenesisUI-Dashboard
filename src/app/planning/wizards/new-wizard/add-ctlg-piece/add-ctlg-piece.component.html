@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="keyword">Search by keyword</label>
+			<input type="text" class="form-control" id="keyword" [(ngModel)]="keyword" (ngModelChange)="onActivityFilterChange()" placeholder="Enter keyword" />
+		</div>
+		<div class="form-group">
+			<div>
+				<label for="activity-type">Activity type</label>
+			</div>
+			<div class="btn-group" id="activity-type">
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Exercise}}" (click)="onActivityFilterChange()">Exercises</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Scale}}" (click)="onActivityFilterChange()">Scales</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="activityType" btnRadio="{{ActivityType.Piece}}" (click)="onActivityFilterChange()">Pieces</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="difficulty">Difficulty</label>
+			<select class="form-control" id="difficulty" [(ngModel)]="difficulty" (change)="onActivityFilterChange()">
+				<option *ngFor="let difficulty of difficulties">{{ difficulty }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="technique">Technique</label>
+			<select class="form-control" id="technique" [(ngModel)]="technique" (change)="onActivityFilterChange()">
+				<option *ngFor="let technique of techniques">{{ technique }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="grade">Grade</label>
+			<select class="form-control" id="grade" [(ngModel)]="grade" (change)="onActivityFilterChange()">
+				<option *ngFor="let grade of grades">{{ grade }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="collection">Collection</label>
+			<select class="form-control" id="collection" [(ngModel)]="collection" (change)="onActivityFilterChange()">
+				<option *ngFor="let collection of collections">{{ collection }}</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<dx-list selectionMode="none" [height]="500" (onItemClick)="onActivityClick($event)">
+      <dxi-item *ngFor="let activity of filteredActivities.entries">
+      	<strong>{{activity.name}}</strong>
+      	<span class="text-gray">
+      		({{activity.code}})
+      		<br/>
+      		{{activity.composer}}
+      	</span>
+      </dxi-item>
+  	</dx-list>
+	</div>
+	<div class="col-md-4">
+		<h6>{{selectedActivity.name}}</h6>
+		<div>{{selectedActivity.desc}}</div>
+		<ul>
+			<li *ngFor="let detail of selectedActivity.detail">{{detail}}</li>
+		</ul>
+		<tabset>
+      <tab heading="Reference video">
+        <div class="embed-responsive embed-responsive-16by9">
+				  <iframe class="embed-responsive-item"></iframe>
+				</div>
+      </tab>
+      <tab heading="Music score">
+        <div class="embed-responsive embed-responsive-16by9">
+				  <iframe class="embed-responsive-item"></iframe>
+				</div>
+      </tab>
+    </tabset>
+	</div>
+</div>
