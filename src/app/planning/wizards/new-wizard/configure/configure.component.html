@@ -1,0 +1,45 @@
+<div class="card card-block">
+	Practice Piece:
+	<span>
+		<button type="button" class="btn btn-primary" (click)="goto(2)">Add piece from catalogue</button>
+		<button type="button" class="btn btn-secondary" (click)="goto(3)">Add custom piece</button>
+	</span>
+</div>
+<div class="card card-block">
+	<b>Record Piece & Upload</b>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<div class="form-group">
+			<div><label for="upload-deadline">Set upload deadline</label></div>
+			<button type="button" id="upload-deadline" class="btn btn-secondary" (click)="settingDeadline = true; settingDueTime = false;">{{uploadDeadline | date: "dd/MM/y"}}</button>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="form-group">
+			<div><label for="due-time">Set due time</label></div>
+			<button type="button" id="due-time" class="btn btn-secondary" (click)="settingDueTime = !settingDueTime; settingDeadline = false">{{dueTime | date: "HH:mm"}}</button>
+			<timepicker [(ngModel)]="dueTime" *ngIf="settingDueTime" [showSpinners]="true"></timepicker>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<div><label for="learning-strategy">Set learning strategy</label></div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" type="radio" name="learning-strategy" value="custom" checked>
+					Practice<input type="number" class="num-bars" min="1" [(ngModel)]="numBars">bars per day
+				</label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" type="radio" name="learning-strategy" value="full">
+					Practice full piece every day
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="datepicker">
+	<datepicker [(ngModel)]="uploadDeadline" *ngIf="settingDeadline" (selectionDone)="settingDeadline = false"></datepicker>
+</div>
