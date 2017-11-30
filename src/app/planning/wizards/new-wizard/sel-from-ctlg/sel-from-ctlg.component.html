@@ -1,0 +1,66 @@
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="keyword">Search by keyword</label>
+			<input type="text" class="form-control" id="keyword" [(ngModel)]="keyword" (ngModelChange)="onWizardFilterChange()" placeholder="Enter keyword" />
+		</div>
+		<div class="form-group">
+			<div>
+				<label for="wizard-type">Wizard type</label>
+			</div>
+			<div class="btn-group" id="wizard-type">
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="wizardType" btnRadio="{{WizardCatalogEntryType.Learn}}" (click)="onWizardFilterChange()">Learn</label>
+				<label class="btn btn-secondary btn-sm" [(ngModel)]="wizardType" btnRadio="{{WizardCatalogEntryType.Challenge}}" (click)="onWizardFilterChange()">Challenge</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="difficulty">Difficulty</label>
+			<select class="form-control" id="difficulty" [(ngModel)]="difficulty" (change)="onWizardFilterChange()">
+				<option *ngFor="let difficulty of difficulties">{{ difficulty }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="technique">Technique</label>
+			<select class="form-control" id="technique" [(ngModel)]="technique" (change)="onWizardFilterChange()">
+				<option *ngFor="let technique of techniques">{{ technique }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="grade">Grade</label>
+			<select class="form-control" id="grade" [(ngModel)]="grade" (change)="onWizardFilterChange()">
+				<option *ngFor="let grade of grades">{{ grade }}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="collection">Collection</label>
+			<select class="form-control" id="collection" [(ngModel)]="collection" (change)="onWizardFilterChange()">
+				<option *ngFor="let collection of collections">{{ collection }}</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<dx-list selectionMode="none" [height]="500" (onItemClick)="onWizardClick($event)">
+      <dxi-item *ngFor="let wizard of filteredWizard.entries">
+      	<strong>{{wizard.name}}</strong>
+      	<span class="text-gray">
+      		<!-- ({{wizard.code}}) -->
+      		<br/>
+      		{{wizard.type}} | {{wizard.steps.length}} steps
+      	</span>
+      </dxi-item>
+  	</dx-list>
+	</div>
+	<div class="col-md-4">
+		<h6><strong>{{selectedWizard.name}}</strong></h6>
+		<div>{{selectedWizard.desc}}</div>
+		<ul>
+			<li *ngFor="let detail of selectedWizard.detail">{{detail}}</li>
+		</ul>
+		<div><strong>Wizard Steps</strong></div>
+		<div *ngFor="let step of selectedWizard.steps">
+			<div class="step">
+				{{step.name}}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+@import '../../../../../scss/_telmi_custom-variables.scss';
+
+.text-gray {
+	color: gray;
+}
+
+.step {
+	padding: 8px;
+	border: 1px solid $color-grey-24;
+	margin-bottom: 4px;
+}

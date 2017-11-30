@@ -1,0 +1,11 @@
+.piece {
+	padding: 15px;
+	border: 1px solid #E3E8EC;
+	margin-bottom: 10px;
+}
+.piece:last-child {
+	margin-bottom: 0px;
+}
+.piece:first-child {
+	margin-top: 10px;
+}

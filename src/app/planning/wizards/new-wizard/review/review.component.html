@@ -1,0 +1,11 @@
+<div>
+	Wizard steps
+</div>
+<div>
+	<div class="piece" *ngFor="let piece of pieces">
+		<strong>{{piece.type | ucfirst}} Piece: [[{{piece.name}}]]</strong> | {{piece.duration}} minutes, {{piece.numBars}} bars / day
+	</div>
+	<div class="piece">
+		<strong>Record Piece & Upload</strong> by {{uploadDeadline | date: "d MMMM y, HH:mm"}}
+	</div>
+</div>
